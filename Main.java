@@ -1,19 +1,18 @@
 public class Main {
     public static void main(String[] args) {
-   Car c=new Car();
-   c.start();
-   c.run();
-    }
-}
-abstract class Vehicle{
-    void start(){
-        System.out.println("vehicle starts");
-    }
-    abstract  void run();
-}
-class Car extends Vehicle{
-    void run(){
-        System.out.println("car runs");
+        Student s=new Student();
+        s.display();
 
+    }
+}
+abstract  class Person{
+    Person(){
+        System.out.println("constructor of person");
+    }
+    abstract void display();
+}
+class Student extends Person{
+    void display(){
+        System.out.println("students details");
     }
 }
