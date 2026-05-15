@@ -1,19 +1,16 @@
 public class Main {
     public static void main(String[] args) {
-    Fan f=new Fan();
-    f.start();
-    f.stop();
+        Outer O=new Outer();
+        Outer.inner i=O.new inner();
+
+        i.show();
+
     }
 }
-abstract class Machine{
-    abstract void start();
-    abstract void stop();
-}
-class Fan extends Machine{
-    void start(){
-        System.out.println("fan starts");
-    }
-    void stop(){
-        System.out.println("fan stop");
+class Outer{
+    class inner{
+        void show(){
+            System.out.println("inner class method");
+        }
     }
 }
