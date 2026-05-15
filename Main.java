@@ -1,19 +1,14 @@
 public class Main {
     public static void main(String[] args) {
-       Outer o=new Outer();
-       Outer.inner i=o.new inner();
-       i.display();
-
-
+        Outer o=new Outer();
+        Outer.inner i=new Outer.inner();
+        i.show();
     }
-}
-class Outer {
-    int x = 10;
-
-    class inner {
-        void display() {
-            System.out.println(x);
-
+    }
+    class Outer{
+    static class inner{
+        void show(){
+            System.out.println("static inner method");
         }
     }
-}
+    }
