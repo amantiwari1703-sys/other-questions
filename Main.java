@@ -1,16 +1,15 @@
 public class Main {
     public static void main(String[] args){
-   Dog d=new Dog();
-   d.sound();
+Circle s=new Circle();
+s.draw();
     }
 }
-abstract class Animal{
-    abstract void sound ();
+abstract class Shape{
+    abstract void draw();
 }
-class Dog extends Animal{
-    void sound(){
-        System.out.println("dog barks");
-
+class Circle extends Shape{
+    void draw(){
+        System.out.println("drawing circle");
     }
-
 }
+
